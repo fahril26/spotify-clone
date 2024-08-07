@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply bg-dark lg:rounded-md;
+  }
+
+  .rounded-btn {
+    @apply w-7 h-7 lg:w-8 lg:h-8 rounded-full hover:bg-white/5 flex items-center justify-center;
+  }
+
+  .dropdown {
+    @apply relative;
+  }
+
+  .dropdown-btn {
+    @apply w-full py-2 px-4 text-start rounded-sm;
+  }
+
+  .dropdown-menu {
+    @apply w-36 bg-secondary absolute top-8 -left-32 rounded-md;
+  }
+  .dropdown-item {
+    @apply text-sm  inline-flex w-full hover:bg-white/15 cursor-pointer;
+  }
+}
+
+html {
+  color: #fff;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-slide {
+  width: 7.5rem !important;
+}
+
+.active-item {
+  @apply text-green-600;
+}
+
+.modal-backdrop::after {
+  content: "";
+  @apply block w-full fixed inset-0 bg-black/40;
+}
+
+.duration {
+  @apply text-xs lg:text-sm text-gray-400;
+}
+
+
+main::-webkit-scrollbar {
+  @apply w-3 bg-transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800/0;
+}
+
+main:hover::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800/100;
+}
+
+#playlist::-webkit-scrollbar {
+  @apply w-3 bg-transparent;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800/0;
+}
+
+#playlist:hover::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800/100;
+}
